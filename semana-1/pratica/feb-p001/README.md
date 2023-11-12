@@ -1,0 +1,2 @@
+Desenvolvimento  de  um  site  da  web  básico,  estruturando  o 
+conteúdo das  páginas utilizando as tags HTML vistas em sala de aula, como headings, navegação entre páginas, listas, parágrafos, quebra de linhas, mudanças temáticas de conteúdo. 
