@@ -1,0 +1,28 @@
+img {
+    width: 200px;
+    height: 200px;
+}
+
+.nomeCor{
+    font-weight: normal;
+}
+
+#amarelo {
+    color: yellow;
+}
+
+#azul {
+    color: blue;
+}
+
+#vermelho {
+    color: red;
+}
+
+#marron {
+    color: burlywood;
+}
+
+#violeta {
+    color: purple;
+}
