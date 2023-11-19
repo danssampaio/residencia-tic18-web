@@ -1,0 +1,1 @@
+- Desenvolver  um  design  para  uma  página  da  web  utilizando  a linguagem CSS. Aplicar as propriedades e técnicas da linguagem CSS que foram vistas em sala de aula.
