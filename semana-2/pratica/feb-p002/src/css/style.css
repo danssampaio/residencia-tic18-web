@@ -1,13 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Vina+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Vina+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2? família ? & família - & família & display-swap');
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
 
 header {
-    background-color: #333;
+    background-color: #690c0c;
+    font-family: 'Vina Sans', sans-serif;
     color: #fff;
     text-align: center;
-    font-size: 50px;
+    font-size: 60px;
     padding: 30px;
 }
 
@@ -30,6 +35,7 @@ header {
 ul {
     text-decoration: none;
     color: black;
+    font-family: 'Glass Antiqua', cursivo;
     font-size: 20px;
 }
 
@@ -52,7 +58,7 @@ ul {
 
 .noticias a {
     text-decoration: none;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 .noticias-int {
@@ -63,17 +69,50 @@ ul {
 }
 
 .noticias-int-int {
-    background-color: #f0f0f0;
+    background-color: rgb(92, 90, 176);
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-family: 'Quicksand', sans-serif;
     text-decoration: none;
     margin-block-end: 15px;
     padding-inline: 5px;
 }
 
 .noticias-int-int:hover {
-    background-color: rgb(240, 174, 174);
+    background-color: rgb(147, 74, 74);
 }
+
+.destaque {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow-x: auto;
+    white-space: nowrap;
+    max-height: 207px;
+}
+
+.destaque-int {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+}
+
+/* 
+Coloquei a imagem em 100% pois 100px ficaria muito pequena */
+
+.destaque-int img {
+    width: 100%;
+    padding-block: 10px;
+    padding-inline: 10px;
+}
+
+.destaque-int-int {
+    margin-block-end: 10px;
+    padding-inline: 10px;
+}
+
 
 .container-grid-2 {
     display: grid;
@@ -90,6 +129,7 @@ ul {
 }
 
 .servicos-int {
+    text-decoration: none;
     height: 200px;
 }
 
@@ -122,4 +162,15 @@ footer {
         grid-template-columns: 1fr;
     }
 
+    .destaque-int {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .destaque-int img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+        /* Adicionando espaço entre as imagens */
+    }
 }
