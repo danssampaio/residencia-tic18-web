@@ -1,16 +1,31 @@
+body{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
 .container-destinos {
+    width: 50%;
     display: grid;
+    gap: 25px;
     grid-template-columns: repeat(3, 33.33%);
     justify-items: center;
 }
 
 .roteiros-viagens {
-    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 200px;
+    height: auto;
     text-align: center;
     box-sizing: border-box;
     border-radius: 10px;
     background-color: #E5D4FF;
     color: #742DB7;
+    box-shadow: 2px 3px #c1afde;
+    position: relative;
 }
 
 .roteiro-incluso{
@@ -31,13 +46,23 @@
 }
 
 .roteiro-comprar{
+    position: relative;
     background-color: #8FD429;
     border-radius: 10px;
     color: white;
     border: none;
-    box-shadow: none;
+    font-weight: bold;
+    box-shadow: 2px 2px #c1afde;
     margin-block: 5%;
     padding: 8px;
+}
+
+.roteiro-comprar:active{
+    background-color:#7cca07;
+}
+
+.roteiro-comprar:hover{
+    cursor: pointer;
 }
 
 
