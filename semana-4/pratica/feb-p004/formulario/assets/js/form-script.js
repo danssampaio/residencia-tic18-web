@@ -1,46 +1,47 @@
+var regex = /^(ftp|http|https):\/\/[^ "]+$/;
 
 function inserirPacote() {
-    var destino = document.getElementById('destino').value;
-    var imagem = document.getElementById('imagem').value;
-    var duracao = document.getElementById('duracao').value;
-    var inclusos = document.getElementById('inclusos').value.split('\n');
-    var preco = document.getElementById('preco').value;
+    const destino = document.getElementById("destino").value;
+    const imagem = document.getElementById("imagem").value;
+    const duracao = document.getElementById("duracao").value;
+    const inclusos = document.getElementById("inclusos").value.split(/,|\n/).map(item => item.trim());
+    const preco = document.getElementById("preco").value;
 
-    var novoPacote = document.createElement('div');
-    novoPacote.className = 'roteiros-viagens';
+    if (!destino || !imagem || !duracao || !inclusos || !preco) {
+        alert("Por favor, preencha todos os campos.");
+        return;
+    } else {
+        if (isNaN(preco)) {
+            alert('Por favor, insira um preço válido.');
+            return;
+        }
+        if (!regex.test(imagem)) {
+            alert('Por favor, insira um link válido.');
+            return;
+          }
+    }
 
-    var img = document.createElement('img');
-    img.src = imagem;
-    img.alt = 'Imagem do novo destino';
+    const novoRoteiro = document.createElement("div");
+    novoRoteiro.className = "roteiros-viagens";
 
-    var divDestino = document.createElement('div');
-    divDestino.className = 'roteiro-destino';
-    divDestino.textContent = destino;
+    const inclusosHTML = inclusos.map(item => `<li>${item}</li>`).join("");
 
-    var ulInclusos = document.createElement('ul');
-    ulInclusos.className = 'roteiro-incluso';
-    inclusos.forEach(function (itemTexto) {
-        var li = document.createElement('li');
-        li.textContent = itemTexto;
-        ulInclusos.appendChild(li);
-    });
+    novoRoteiro.innerHTML = `
+        <img class="img-roteiro" src="${imagem}" alt="${destino}">
+        <div class="roteiro-destino">${destino}</div>
+        <ul class="roteiro-incluso">${inclusosHTML}</ul>
+        <div class="roteiro-preco">R$${preco}</div>
+        <div class="roteiro-obs">Taxas Inclusas</div>
+        <div class="roteiro-parcelamento">Em até 10x sem Juros</div>
+        <button class="roteiro-comprar" onclick="capturarInformacoes(this)">Comprar</button>
+    `;
 
-    var divPreco = document.createElement('div');
-    divPreco.className = 'roteiro-preco';
-    divPreco.textContent = preco;
+    const containerDestinos = document.querySelector(".container-destinos");
+    containerDestinos.appendChild(novoRoteiro);
 
-    var buttonComprar = document.createElement('button');
-    buttonComprar.className = 'roteiro-comprar';
-    buttonComprar.textContent = 'Comprar';
-
-    novoPacote.appendChild(img);
-    novoPacote.appendChild(divDestino);
-    novoPacote.appendChild(ulInclusos);
-    novoPacote.appendChild(divPreco);
-    novoPacote.appendChild(buttonComprar);
-
-    var containerDestinos = document.getElementById('containerDestinos');
-    containerDestinos.appendChild(novoPacote);
-
-    document.getElementById('formulario').reset();
+    document.getElementById("destino").value = "";
+    document.getElementById("imagem").value = "";
+    document.getElementById("duracao").value = "";
+    document.getElementById("inclusos").value = "";
+    document.getElementById("preco").value = "";
 }

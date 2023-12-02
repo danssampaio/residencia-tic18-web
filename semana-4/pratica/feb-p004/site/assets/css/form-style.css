@@ -1,13 +1,10 @@
-/* Conteúdo do arquivo form-style.css */
 
 body {
     font-family: 'Glass Antiqua', cursive;
     display: flex;
     align-content: center;
     justify-content: center;
-    background-color: #f3f3f3; /* Cor de fundo */
-    margin: 0;
-    min-height: 100vh;
+    background-color: #f3f3f3; 
 }
 
 .formulario-container {
@@ -16,17 +13,18 @@ body {
     padding: 20px;
     box-sizing: border-box;
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 10px rgba(4, 5, 6, 0.34);
+    border-radius: 15px;
 }
 
 h2 {
-    color: #742DB7; /* Cor do título */
+    color: #742DB7; 
 }
 
 label {
     display: block;
     margin-top: 10px;
-    color: #333; /* Cor do rótulo */
+    color: #333; 
 }
 
 input,
@@ -36,6 +34,18 @@ textarea {
     margin-top: 5px;
     margin-bottom: 15px;
     box-sizing: border-box;
+    border-radius: 6px;
+    transition-duration: 2s;
+}
+
+input:hover, textarea:hover{
+    background-color: rgba(4, 5, 6, 0.16);
+    transition: 0.2s;
+}
+
+input:focus,
+textarea:focus {
+    background-color: rgba(4, 5, 6, 0.16);
 }
 
 button {
@@ -54,4 +64,4 @@ button:hover {
     background-color: #79c20c;
 }
 
-/* Adicione outros estilos conforme necessário */
+

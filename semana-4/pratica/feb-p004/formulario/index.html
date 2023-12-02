@@ -1,10 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>Roteiros Turísticos - Formulário</title>
-    <link rel="stylesheet" href="./assets/css/form-style.css"> 
+    <title>Roteiros Turísticos</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/form-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
 </head>
+
 <body>
+    <div class="container-destinos">
+
+    </div>
+
+    <hr>
+
     <div class="formulario-container">
         <h2>Adicionar Novo Pacote Turístico</h2>
         <form id="formulario">
@@ -17,7 +29,7 @@
             <label for="duracao">Duração:</label>
             <input type="text" id="duracao" name="duracao" required>
 
-            <label for="inclusos">Itens Inclusos:</label>
+            <label for="inclusos">Itens Inclusos (preencher por linha ou vírgula):</label>
             <textarea id="inclusos" name="inclusos" required></textarea>
 
             <label for="preco">Preço:</label>
@@ -26,6 +38,10 @@
             <button type="button" onclick="inserirPacote()">Inserir Pacote</button>
         </form>
     </div>
-    <script src="./assets/js/form-script.js"></script> 
+
+    <script src="./assets/js/form-script.js"></script>
+    <script src="./assets/js/script.js"></script>
+
 </body>
+
 </html>
