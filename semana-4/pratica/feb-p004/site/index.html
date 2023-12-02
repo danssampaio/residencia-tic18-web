@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>Roteiros Turísticos</title>
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="styleshet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
 </head>
-
 <body>
     <div class="container-destinos">
         <div class="roteiros-viagens">
@@ -22,7 +20,7 @@
             <div class="roteiro-preco">R$670,00</div>
             <div class="roteiro-obs">Taxas Inclusas</div>
             <div class="roteiro-parcelamento">Em até 10x sem Juros</div>
-            <button class="roteiro-comprar">Comprar</button>
+            <button class="roteiro-comprar" onclick="capturarInformacoes(this)">Comprar</button>
         </div>
         <div class="roteiros-viagens">
             <img src="./assets/imgs/fortaleza.jpg" alt="cidade de fortaleza">
@@ -35,8 +33,7 @@
             <div class="roteiro-preco">R$1513,00</div>
             <div class="roteiro-obs">Taxas Inclusas</div>
             <div class="roteiro-parcelamento">Em até 10x sem Juros</div>
-            <button class="roteiro-comprar">Comprar</button>
-
+            <button class="roteiro-comprar" onclick="capturarInformacoes(this)">Comprar</button>
         </div>
         <div class="roteiros-viagens">
             <img src="./assets/imgs/campinas.jpg" alt="universidade de campinas">
@@ -49,11 +46,9 @@
             <div class="roteiro-preco">R$900,00</div>
             <div class="roteiro-obs">Taxas Inclusas</div>
             <div class="roteiro-parcelamento">Em até 10x sem Juros</div>
-            <button class="roteiro-comprar">Comprar</button>
-
+            <button class="roteiro-comprar" onclick="capturarInformacoes(this)">Comprar</button>
         </div>
-
     </div>
+    <script src="./assets/js/script.js"></script>
 </body>
-
 </html>
