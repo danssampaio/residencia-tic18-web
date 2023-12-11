@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import { getCountryNews, getCampusWeather} from '../apiService';
+import { getCountryNews, getCampusWeather, getPosts, getUsers} from './apiService';
 
 const fillNews = async () => {
   try {
@@ -20,20 +20,47 @@ const fillNews = async () => {
 
 const fillWeather = async () => {
   try {
-    const weather = await getCampusWeather();
-    const weatherContainer = $('#weather-container');
+      const weather = await getCampusWeather( -14.7980073, -39.1763752);
 
-    // Lógica para processar os dados da previsão do tempo
+      if (weather && weather.consolidated_weather && weather.consolidated_weather.length > 0) {
+          const todayWeather = weather.consolidated_weather[0];
 
-    const temperature = $(`<p>Temperature: ${weather.temperature}</p>`);
-    const conditions = $(`<p>Conditions: ${weather.conditions}</p>`);
-    weatherContainer.append(temperature, conditions);
+          $('#temperature').text(`Temperature: ${todayWeather.the_temp.toFixed(2)}°C`);
+          $('#conditions').text(`Conditions: ${todayWeather.weather_state_name}`);
+      } else {
+          $('#temperature').text('Erro ao obter previsão do tempo');
+      }
   } catch (error) {
-    console.error('Error filling weather:', error);
+      console.error('Error filling weather:', error);
+  }
+};
+
+const fillResults = async () => {
+  try {
+    const posts = await getPosts();
+    const users = await getUsers();
+
+    const resultsContainer = $('.resultados-int');
+
+    posts.forEach((post: any) => {
+      const resultItem = $(`<div class="result-item"></div>`);
+      const title = $(`<h3>${post.title}</h3>`);
+      const body = $(`<p>${post.body}</p>`);
+      resultItem.append(title, body);
+      resultsContainer.append(resultItem);
+    });
+
+    users.forEach((user: any) => {
+      const resultItem = $(`<div class="result-item"></div>`);
+      const name = $(`<h3>${user.name}</h3>`);
+      const email = $(`<p>${user.email}</p>`);
+      resultItem.append(name, email);
+      resultsContainer.append(resultItem);
+    });
+  } catch (error) {
+    console.error('Error filling results:', error);
   }
 };
 
 $(document).ready(() => {
-  fillNews();
-  fillWeather();
 });

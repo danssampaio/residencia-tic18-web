@@ -9,7 +9,7 @@
       "outDir": "./dist",
       "baseUrl": "."
     },
-    "include": ["src/**/*.ts", "src/apiService.ts", "src/server.ts"],
+    "include": ["src/**/*.ts", "src/app/apiService.ts", "src/server.ts"],
     "exclude": ["node_modules"]
   }
   
