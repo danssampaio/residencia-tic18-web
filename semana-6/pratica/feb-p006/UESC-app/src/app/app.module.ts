@@ -4,13 +4,13 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { MenuComponent } from './menu/menu.component';
-import { NoticiasComponent } from './noticias/noticias.component';
-import { DestaqueComponent } from './destaque/destaque.component';
-import { ServicosComponent } from './servicos/servicos.component';
-import { ResultadosComponent } from './resultados/resultados.component';
-import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { NoticiasComponent } from './components/noticias/noticias.component';
+import { DestaqueComponent } from './components/destaque/destaque.component';
+import { ServicosComponent } from './components/servicos/servicos.component';
+import { ResultadosComponent } from './components/resultados/resultados.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [

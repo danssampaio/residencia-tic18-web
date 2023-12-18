@@ -1,0 +1,13 @@
+<div class="noticias">
+    <div class="fixed-title">Notícias</div>
+    <hr />
+    <div class="noticias-int">
+        <div *ngIf="noticiasCursosSuperiores">
+            <ul>
+                <li *ngFor="let noticia of noticiasCursosSuperiores">
+                    <a href="{{ noticia.url }}" target="_blank">{{ noticia.title }}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
