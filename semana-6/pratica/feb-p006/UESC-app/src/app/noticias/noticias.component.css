@@ -1,0 +1,32 @@
+.noticias {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .noticias a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  }
+  
+  .noticias-int {
+    overflow-x: auto;
+    white-space: nowrap;
+    max-height: 150px;
+    padding-inline: 10px;
+  }
+  
+  .noticias-int-int {
+    background-color: rgb(92, 90, 176);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Quicksand', sans-serif;
+    text-decoration: none;
+    margin-block-end: 15px;
+    padding-inline: 5px;
+  }
+  
+  .noticias-int-int:hover {
+    background-color: rgb(147, 74, 74);
+  }
+  
