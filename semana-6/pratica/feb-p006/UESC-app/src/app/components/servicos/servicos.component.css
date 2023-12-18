@@ -1,0 +1,22 @@
+.servicos {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow-y: auto;
+    overflow-x: auto;
+    position: relative;
+}
+
+.servicos-int {
+    text-decoration: none;
+    height: 200px;
+}
+
+.fixed-title {
+  position: sticky;
+  top: 0;
+  background-color: #f0f0f0;
+  padding: 10px;
+  z-index: 1;
+  font-weight: bold;
+}
