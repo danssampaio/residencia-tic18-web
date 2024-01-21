@@ -1,0 +1,9 @@
+<div class="container-body">
+  <app-carregador-veiculos (veiculosCarregados)="onVeiculosCarregados($event)"></app-carregador-veiculos>
+  <div class="layout">
+    <app-classes [veiculos]="veiculos" (categoriaSelecionada)="onCategoriaSelecionada($event)"></app-classes>
+    <app-objetos [categoriaSelecionada]="categoriaSelecionada" [veiculos]="veiculos"
+      (veiculoSelecionado)="onVeiculoSelecionado($event)"></app-objetos>
+  </div>
+
+</div>
