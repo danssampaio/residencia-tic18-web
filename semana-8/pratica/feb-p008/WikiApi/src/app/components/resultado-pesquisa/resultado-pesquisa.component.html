@@ -1,0 +1,15 @@
+<!-- resultado-pesquisa.component.html -->
+<div class="container-resultado-pesquisa">
+  <div class="title">
+    <h3>Resultados para "{{ termoPesquisa }}"</h3>
+  </div>
+  <div class="resultados">
+    <div *ngFor="let resultado of resultados">
+      <div class="resultado-item">
+        <h4 [innerHTML]="resultado.title | boldSearch: termoPesquisa"></h4>
+        <p [innerHTML]="resultado.snippet | boldSearch: termoPesquisa"></p>
+        <a [href]="'https://en.wikipedia.org/wiki/' + resultado.title" target="_blank">Ver mais</a>
+      </div>
+    </div>
+  </div>
+</div>
