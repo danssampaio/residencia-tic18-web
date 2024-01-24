@@ -1,4 +1,10 @@
 <div>
+    <app-navbar></app-navbar>
+</div>
+<div class="container">
     <app-barra-pesquisa (termoPesquisaEvent)="pesquisar($event)"></app-barra-pesquisa>
     <app-resultado-pesquisa [resultados]="resultados" [termoPesquisa]="termoPesquisa"></app-resultado-pesquisa>
+</div>
+<div>
+    <app-footer></app-footer>
 </div>
