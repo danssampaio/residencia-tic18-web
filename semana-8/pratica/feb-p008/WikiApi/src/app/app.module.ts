@@ -7,6 +7,7 @@ import { BarraPesquisaComponent } from './components/barra-pesquisa/barra-pesqui
 import { BoldSearchPipe } from './pipes/bold-search.pipe';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
     ResultadoPesquisaComponent,
     BarraPesquisaComponent,
     BoldSearchPipe,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
