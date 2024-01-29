@@ -8,13 +8,12 @@ import { Observable } from 'rxjs';
 
 export class WikipediaService {
 
-  private corsAnywhere = 'https://cors-anywhere.herokuapp.com/';
   private apiUrl = 'https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=';
 
   constructor(private http: HttpClient) { }
 
   search(term: string): Observable<any> {
-    const fullUrl = this.corsAnywhere + this.apiUrl + term + '&utf8=1';
+    const fullUrl = this.apiUrl + term + '&origin=*' + '&origin=*';
     return this.http.get(fullUrl);
   }
 }
