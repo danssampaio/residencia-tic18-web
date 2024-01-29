@@ -8,12 +8,12 @@ import { Observable } from 'rxjs';
 
 export class WikipediaService {
 
-  private apiUrl = 'https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=';
+  private apiUrl = 'https://pt.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=';
 
   constructor(private http: HttpClient) { }
 
   search(term: string): Observable<any> {
-    const fullUrl = this.apiUrl + term + '&origin=*' + '&origin=*';
+    const fullUrl = this.apiUrl + term + '&origin=*';
     return this.http.get(fullUrl);
   }
 }
