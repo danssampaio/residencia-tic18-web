@@ -1,0 +1,11 @@
+<div class="container-pesquisa">
+    <div class="title">
+        <h2>Consultando a Wiki API</h2>
+    </div>
+    <div class="barra-pesquisa">
+        <form (submit)="buscar()">
+            <input type="text" id="pesquisa" name="q" placeholder="Digite sua pesquisa..." [(ngModel)]="termoPesquisa">
+            <input type="submit" value="Pesquisar">
+        </form>
+    </div>
+</div>
