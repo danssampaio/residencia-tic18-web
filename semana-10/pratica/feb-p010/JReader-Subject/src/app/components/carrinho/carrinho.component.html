@@ -1,0 +1,18 @@
+<div class="container-carrinho" [ngClass]="{'selected-carrinho': veiculosSelecionados.length > 0}">
+    <div class="title" *ngIf="veiculosSelecionados.length > 0" [ngClass]="{'selected-carrinho': veiculosSelecionados.length > 0}">
+        <h3>Carrinho</h3>
+    </div>
+    <div class="lista-veiculos" [ngClass]="{'selected-carrinho': veiculosSelecionados.length > 0}">
+        <ul>
+            <li *ngFor="let veiculo of veiculosSelecionados">
+                {{ veiculo.Name }} - {{ veiculo.Model }}
+                <div class="buttons-categories" [ngClass]="{'selected-carrinho': veiculosSelecionados.length > 0}">
+                    <button (click)="removerVeiculo(veiculo)">Remover</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="buttons-categories button-finish"  [ngClass]="{'selected-carrinho': veiculosSelecionados.length > 0}">
+        <button *ngIf="veiculosSelecionados.length > 0" class="buttons-categories" (click)="concluirCarrinho(veiculosSelecionados)" appCarrinhoHighlight>Finalizar</button>
+    </div>
+</div>
