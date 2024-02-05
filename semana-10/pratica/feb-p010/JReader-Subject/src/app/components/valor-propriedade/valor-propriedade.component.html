@@ -1,0 +1,11 @@
+<div class="container-valor-propriedade" [ngClass]="{'selected-property': propriedadeSelecionada}">
+    <div class="title" [ngClass]="{'selected-property': propriedadeSelecionada}">
+        <h3>{{ propriedadeSelecionada }}</h3>
+    </div>
+    <div class="valores-propriedades" [ngClass]="{'selected-property': propriedadeSelecionada}">
+        <p>{{ valorPropriedade }}</p>
+    </div>
+    <div class="buttons-categories" [ngClass]="{'selected-property': propriedadeSelecionada}">
+        <button *ngIf="propriedadeSelecionada" (click)="adicionarCarrinho()">Adicionar</button>
+    </div>
+</div>
