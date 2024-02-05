@@ -1,0 +1,15 @@
+<div class="container-body">
+    <app-carregador-veiculos (veiculosCarregados)="onVeiculosCarregados($event)"></app-carregador-veiculos>
+    <div class="layout">
+      <app-classes [veiculos]="veiculos" (categoriaSelecionada)="onCategoriaSelecionada($event)"></app-classes>
+      <app-objetos [categoriaSelecionada]="categoriaSelecionada" [veiculos]="veiculos"
+        (veiculoSelecionado)="onVeiculoSelecionado($event)"></app-objetos>
+      <app-propriedades [veiculoSelecionado]="veiculoSelecionado"
+        (propriedadeSelecionada)="onPropriedadeSelecionada($event)"></app-propriedades>
+      <app-valor-propriedade [propriedadeSelecionada]="propriedadeSelecionada" [veiculoSelecionado]="veiculoSelecionado"
+        (adicionarAoCarrinho)="adicionarAoCarrinho($event)"></app-valor-propriedade>
+      <app-carrinho [veiculosSelecionados]="veiculosSelecionados" (veiculoRemovido)="removerVeiculo($event)"
+        (carrinhoFinalizado)="finalizarCarrinho($event)"></app-carrinho>
+    </div>
+  
+  </div>

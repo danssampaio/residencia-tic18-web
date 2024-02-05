@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MainWikiComponent } from './main.component';
+import { MainReaderComponent } from './main.component';
 
-describe('MainWikiComponent', () => {
-  let component: MainWikiComponent;
-  let fixture: ComponentFixture<MainWikiComponent>;
+describe('MainReaderComponent', () => {
+  let component: MainReaderComponent;
+  let fixture: ComponentFixture<MainReaderComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [MainWikiComponent]
+      declarations: [MainReaderComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(MainWikiComponent);
+    fixture = TestBed.createComponent(MainReaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

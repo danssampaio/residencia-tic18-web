@@ -1,0 +1,11 @@
+<div class="container-class" [ngClass]="{'classes-carregadas': categorias.length > 0}">
+    <div class="title"  *ngIf="categorias.length > 0" [ngClass]="{'classes-carregadas': categorias.length > 0}">
+        <h3>Categorias</h3>
+    </div>
+    <div class="buttons-categories" [ngClass]="{'classes-carregadas': categorias.length > 0}">
+        <button *ngFor="let categoria of categorias" (click)="selecionarCategoria(categoria)" appClassesHighlight>
+            {{ categoria }}
+        </button>
+    </div>
+
+</div>

@@ -1,0 +1,36 @@
+.container-propriedades.selected-object {
+  max-width: 200px;
+  max-height: 500px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 20px;
+}
+
+.title.selected-object {
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.title.selected-object h3 {
+  padding: 12px;
+}
+
+.buttons-categories.selected-object {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons-categories.selected-object button {
+  background-color: #61a1d9;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.618);
+}
+
+.buttons-categories.selected-object button:hover {
+  background-color: #7eaad2;
+  cursor: pointer;
+}

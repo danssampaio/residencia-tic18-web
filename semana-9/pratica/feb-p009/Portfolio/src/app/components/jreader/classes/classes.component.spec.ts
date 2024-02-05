@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MainWikiComponent } from './main.component';
+import { ClassesComponent } from './classes.component';
 
-describe('MainWikiComponent', () => {
-  let component: MainWikiComponent;
-  let fixture: ComponentFixture<MainWikiComponent>;
+describe('ClassesComponent', () => {
+  let component: ClassesComponent;
+  let fixture: ComponentFixture<ClassesComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [MainWikiComponent]
+      declarations: [ClassesComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(MainWikiComponent);
+    fixture = TestBed.createComponent(ClassesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
