@@ -1,6 +1,14 @@
-<mat-tab-group>
-  <mat-tab label="Projeto WikiApi" routerLink="/wiki-api" routerLinkActive="active"></mat-tab>
-  <mat-tab label="Projeto JReader" routerLink="/jreader" routerLinkActive="active"></mat-tab>
-</mat-tab-group>
+<!-- <mat-tab-group>
+  <mat-tab label="Projeto WikiApi" [routerLink]="['/wiki-api']"></mat-tab>
+  <mat-tab label="Projeto JReader" [routerLink]="['/jreader']"></mat-tab>
+  <mat-tab label="Projeto UESC-APP" [routerLink]="['/uesc-app']"></mat-tab>
+</mat-tab-group> -->
+
+<div class="button-container">
+  <a routerLink="/wiki-api" routerLinkActive="active" class="custom-button">WikiApi</a>
+  <a routerLink="/jreader" routerLinkActive="active" class="custom-button">JReader</a>
+  <a routerLink="/uesc-app" routerLinkActive="active" class="custom-button">UESC-APP</a>
+</div>
+
 
 <router-outlet></router-outlet>

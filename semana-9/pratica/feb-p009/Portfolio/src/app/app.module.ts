@@ -3,7 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatTabsModule } from '@angular/material/tabs';
+import {MatToolbarModule} from '@angular/material/toolbar';
 import { AppRoutingModule } from './app-routing.module';
+
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -25,19 +27,28 @@ import { CarregadorVeiculosComponent } from './components/jreader/carregador-vei
 import { ClassHighlightDirective } from './directives/class-highlight.directive';
 import { CarrinhoHighlightDirective } from './directives/carrinho-highlight.directive';
 
+// UESC-app
+import { MainUescComponent } from './components/uesc-app/main/main.component';
+import { MenuComponent } from './components/uesc-app/menu/menu.component';
+import { NoticiasComponent } from './components/uesc-app/noticias/noticias.component';
+import { DestaqueComponent } from './components/uesc-app/destaque/destaque.component';
+import { ServicosComponent } from './components/uesc-app/servicos/servicos.component';
+import { ResultadosComponent } from './components/uesc-app/resultados/resultados.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
 
-    //WikiComponent
+    //WikiComponents
     MainWikiComponent,
     ResultadoPesquisaComponent,
     BarraPesquisaComponent,
     BoldSearchPipe,
     MainReaderComponent,
 
-    //jreaderComponent
+    //jreaderComponents
     CarrinhoComponent,
     ClassesComponent,
     ObjetosComponent,
@@ -45,7 +56,15 @@ import { CarrinhoHighlightDirective } from './directives/carrinho-highlight.dire
     ValorPropriedadeComponent,
     ClassHighlightDirective,
     CarrinhoHighlightDirective,
-    CarregadorVeiculosComponent
+    CarregadorVeiculosComponent,
+
+    //uesc-appComponents
+    MainUescComponent,
+    MenuComponent,
+    NoticiasComponent,
+    DestaqueComponent,
+    ServicosComponent,
+    ResultadosComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,9 +72,11 @@ import { CarrinhoHighlightDirective } from './directives/carrinho-highlight.dire
     FormsModule,
     HttpClientModule,
     MatTabsModule,
+    MatToolbarModule,
     BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
+
 export class AppModule { }
