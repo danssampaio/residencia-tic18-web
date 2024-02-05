@@ -1,0 +1,14 @@
+<div class="resultados">
+    <div class="fixed-title">Resultados
+        <hr />
+    </div>
+    <div class="resultados-int">
+        <div *ngIf="resultados">
+            <ul>
+                <li *ngFor="let resultado of resultados">
+                    {{ resultado.title }}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

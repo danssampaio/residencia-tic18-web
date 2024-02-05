@@ -1,0 +1,25 @@
+.menu {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.menu a,
+ul {
+  text-decoration: none;
+  color: black;
+  font-family: 'Glass Antiqua', cursivo;
+  font-size: 20px;
+}
+
+.menu a:hover {
+  color: rgb(210, 86, 86);
+}
+
+.navbar {
+  margin-top: 5px;
+  padding: 5px;
+  font-size: 20px;
+  font-weight: bold;
+}

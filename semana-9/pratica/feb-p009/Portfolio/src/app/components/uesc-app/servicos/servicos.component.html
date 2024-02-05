@@ -1,0 +1,14 @@
+<div class="servicos">
+    <div class="fixed-title">Serviços
+        <hr />
+    </div>
+    <div class="servicos-int">
+        <div *ngIf="servicos">
+            <ul>
+                <li *ngFor="let servico of servicos">
+                    {{ servico.title }}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

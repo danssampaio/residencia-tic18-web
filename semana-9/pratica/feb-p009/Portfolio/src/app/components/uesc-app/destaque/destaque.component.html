@@ -1,0 +1,15 @@
+<!-- destaque.component.html -->
+<div class="destaque">
+    <div class="fixed-title">Destaques
+        <hr />
+    </div>
+    <div class="destaque-int">
+        <div *ngFor="let destaque of destaques">
+            <img [src]="destaque.urls.regular" alt="{{ destaque.alt_description }}" />
+            <div class="destaque-int-int">
+                <p>{{ destaque.description }}</p>
+                <p>Por: {{ destaque.user.name }}</p>
+            </div>
+        </div>
+    </div>
+</div>
