@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormService } from '../../services/form.service';
 
 
 @Component({
@@ -13,7 +14,7 @@ export class FormsComponent {
   profissoes: string[] = ['Desenvolvedor', 'Analista', 'DevOps', 'Gerente de Projetos', 'Design', 'Engenheiro de Software'];
   dadosEnviados: any;
 
-  constructor() {
+  constructor(private formularioService: FormService) {
     this.form = new FormGroup({
       usuario: new FormControl('', [Validators.required, Validators.maxLength(12)]),
       senha: new FormControl('', [Validators.required, Validators.minLength(4), Validators.pattern(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[$*&@#])[0-9a-zA-Z$*&@#]{8,}$/)]),
@@ -26,6 +27,14 @@ export class FormsComponent {
       profissao: new FormControl('', [Validators.required]),
 
     });
+
+    this.formularioService.setFormData(this.form);
+
+    this.formularioService.getFormData().subscribe((data) => {
+      console.log(data.status);
+      console.log(data);
+    });
+    
   }
 
   dataNascimentoValidator() {
